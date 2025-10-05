@@ -1,0 +1,65 @@
+body
+{
+    background-color: black;    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.photo
+{
+    border-radius: 100px;
+    margin: 16px;
+    
+}
+div.card
+{
+    background-color: lightskyblue; 
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.name
+{
+    margin: 16px;
+}
+.text
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 15px;
+    font-size: 20px;
+}
+button
+{
+    font-size: 22px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 16px;
+    border-radius: 20px;
+    color: mintcream;
+    background-color: blue;
+    transition: transform 0.5s ease-in-out;
+}
+button:hover
+{
+    transform: scale(1.05);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 16px;
+    border-radius: 20px;
+    background-color: rgb(16, 16, 225);
+}
+@media(max-width: 500px){
+    .card{
+        flex-direction: column;
+    }
+    .name{
+        margin: 5px;
+    }
+    .text{
+        padding: 0px;
+    }
+
+}

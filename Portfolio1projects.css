@@ -1,0 +1,268 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    background-color: rgba(0, 0, 0, 0.65);
+    display: flex;
+    justify-content: space-between;
+    font-family: "Alan Sans", sans-serif;
+    padding: 20px;
+    font-size: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    box-sizing: border-box;
+    width: 100%;
+}
+.name{
+    
+    color: white;
+}
+.na {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    padding-right: 60px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
+}
+a:hover {
+    transform: scale(1.1);
+}
+.na img {
+    height: 20px;
+    padding-right: 10px;
+}
+.contact-nav{
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+.contact-nav:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.contact{
+    color: white;
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    top: 40px;
+    right: -60px;
+    padding: 20px;
+    z-index: 30;
+    background-color: black;
+    border: 4px solid white;
+    border-radius: 40px;
+    white-space: nowrap;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s;
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    line-height: 35px;
+}
+div.contact>img{
+    height: 100px;
+    width: 100px;
+    padding-right: 20px;
+}
+.git-icon, .code-logo{
+    width: auto;
+    height: 40px;
+}
+div:hover .contact{
+    cursor: default;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition-delay: 0s;
+}
+
+
+body {
+    color: white;
+    background: url(./Pics/BackgroundImg3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main{
+    flex:1;
+    padding-top: 80px;
+    
+}
+.projects{
+    display: flex;
+    padding: 20px;
+}
+main div{
+    display: flex;
+}
+.projects img{
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+    border:3px solid black;
+    border-radius: 20px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+}
+.projects span{
+    font-family: "Alan Sans", sans-serif;
+    margin: 10px;
+    font-size: 1.6rem;
+}
+
+.projects span h3 a:hover{
+    text-decoration: underline;
+}
+
+footer {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: black;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+}
+
+
+
+.merriweather {
+  font-family: "Merriweather", serif;
+}
+
+.alan-sans{
+    font-family: "Alan Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+@media(max-width: 900px){
+    nav{
+        flex-direction: column;
+        align-items: center;
+        gap:20px;
+        padding: 20px !important;
+    }
+    footer{
+        text-align: center;
+    
+    }
+}
+@media(max-width:730px){
+    .projects{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media(max-width:700px){
+    .contact{
+        right: -20px;
+    }
+}
+@media(max-width:690px){
+    nav{
+        flex-direction: column;
+        align-items: center;
+        gap:20px;
+    }
+    .na{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-right: 0;
+        justify-content: center;
+        text-align: center;
+    }
+    main{
+        margin-top: 90px;
+    }
+    .contact{
+        white-space: wrap;
+        top:40px;
+        right: -100px;
+    }
+    footer{
+        text-align: center;
+    }
+    
+}
+@media(max-width:560px){
+    .contact{
+        top:40px;
+        right: -80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:20px;
+    }
+}
+@media(max-width:520px){
+    .contact{
+        white-space: wrap;
+        top:40px;
+        right: -40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:20px;
+    }
+}
+@media(max-width:420px){
+    nav{
+        position:static;
+        flex-direction: column;
+        align-items: center;
+        gap:20px;
+        text-align: center;
+        background-color: black;
+    }
+    .contact{
+        white-space: wrap;
+        top:40px;
+        right: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:20px;
+        overflow-wrap: anywhere;
+    }
+    main{
+        padding-top: 0px;
+    }
+}
+@media(max-width: 370px) {
+    nav{
+        position:static;
+        flex-direction: column;
+        align-items: center;
+        gap:20px;
+        text-align: center;
+        background-color: black;
+    }
+    .na{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding-right: 0;
+        justify-content: center;
+        text-align: center;
+    }
+    footer{
+        text-align: center;
+    }  
+}
